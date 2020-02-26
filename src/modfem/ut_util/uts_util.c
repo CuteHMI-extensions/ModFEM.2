@@ -315,7 +315,6 @@ int utr_set_interactive(
 		FILE ** interactive_output_p
 )
 {
-
 	time_init();
 	char interactive_input_name[300];
 	char interactive_output_name[300], tmp[100];
