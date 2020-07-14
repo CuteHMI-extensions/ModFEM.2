@@ -54,7 +54,7 @@ int mmr_import_mesh_grad( /* returns: >=0 - success code, <0 - error code */
 
 	/* read dimensions for mesh arrays */
 	fscanf(fp, "%d %d %d %d\n", &mesh->parm.mxno, &mesh->parm.mxed,	&mesh->parm.mxfa, &mesh->parm.mxel );
-	printf("TOUT: DIMENSIONS FOR MESH ARRAYS: %d %d %d %d\n", mesh->parm.mxno, mesh->parm.mxed,	mesh->parm.mxfa, mesh->parm.mxel);
+//	printf("TOUT: DIMENSIONS FOR MESH ARRAYS: %d %d %d %d\n", mesh->parm.mxno, mesh->parm.mxed,	mesh->parm.mxfa, mesh->parm.mxel);
 
 
 	/* read the number of stored node structures, the bottom nad top */
@@ -90,7 +90,7 @@ int mmr_import_mesh_grad( /* returns: >=0 - success code, <0 - error code */
 	mesh->edge =
 			(mmt_edges *)malloc((mesh->parm.mxed + 1) * sizeof(mmt_edges));
 
-	printf("TOUT: num_nod_jk: %d \n", num_nod_jk);
+//	printf("TOUT: num_nod_jk: %d \n", num_nod_jk);
 
 	/* read nodes structures */
 	for (istr = 1; istr <= num_nod_jk; istr++) {
@@ -105,7 +105,7 @@ int mmr_import_mesh_grad( /* returns: >=0 - success code, <0 - error code */
 			mesh->node[istr + i_lay * num_nod_jk].y = y_temp;
 			mesh->node[istr + i_lay * num_nod_jk].z = z_bottom + i_lay * dz;
 
-			printf("TOUT: x: %lg, y: %lg, z: %lg\n", x_temp, y_temp, z_bottom + i_lay * dz);
+//			printf("TOUT: x: %lg, y: %lg, z: %lg\n", x_temp, y_temp, z_bottom + i_lay * dz);
 
 			/*kbw
 			printf("node %d, x - %lf, y - %lf, z - %lf\n",
@@ -123,7 +123,7 @@ int mmr_import_mesh_grad( /* returns: >=0 - success code, <0 - error code */
 				mesh->edge[istr + i_lay * num_nod_jk].node[0] = istr + i_lay * num_nod_jk;
 				mesh->edge[istr + i_lay * num_nod_jk].node[1] = istr + (i_lay + 1) * num_nod_jk;
 
-				printf("TOUT: Edge: 0: %d, 1: %d \n", mesh->edge[istr + i_lay * num_nod_jk].node[0], mesh->edge[istr + i_lay * num_nod_jk].node[1]);
+//				printf("TOUT: Edge: 0: %d, 1: %d \n", mesh->edge[istr + i_lay * num_nod_jk].node[0], mesh->edge[istr + i_lay * num_nod_jk].node[1]);
 			}
 		}
 	}

@@ -2701,7 +2701,7 @@ int i,j,k;
 #else // for OpenMP only
 
 #pragma omp parallel if(Nr_colors_faces>1 && Nr_colors_elems>1)  default(none) \
-  shared(nr_colors_accel, nr_elems, nr_faces, number_of_threads )	\
+  shared(nr_colors_accel, nr_elems, nr_faces, number_of_threads, PDC_COMP_BOTH, PDC_COMP_RHS, PDC_COMP_SM )	\
   firstprivate(Nr_colors_elems, Nr_colors_faces, L_color_index_elems, L_color_index_faces) \
   firstprivate(Problem_id, Level_id, Comp_type, Nr_int_ent, Pdeg_coarse_p, \
 		   L_int_ent_type, L_int_ent_id,  \

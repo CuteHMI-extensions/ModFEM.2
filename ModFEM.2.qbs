@@ -113,7 +113,7 @@ Project {
 			cpp.cFlags: {
 				var result =[]
 
-				if (modfem.config.acceleration === "openmp")
+				if ((modfem.config.acceleration === "openmp") && (modfem.config.openMPLibrary != "iomp5"))
 					result.push("-fopenmp")
 
 				return result
@@ -122,7 +122,7 @@ Project {
 			cpp.cppFlags: {
 				var result =[]
 
-				if (modfem.config.acceleration === "openmp")
+				if ((modfem.config.acceleration === "openmp") && (modfem.config.openMPLibrary != "iomp5"))
 					result.push("-fopenmp")
 
 				return result
