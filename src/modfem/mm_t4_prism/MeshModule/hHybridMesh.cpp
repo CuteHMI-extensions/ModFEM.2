@@ -243,6 +243,7 @@ bool hHybridMesh::normalizationProcessor()
 
 		wasNormalized_ = true;
 	}
+	return true;
 }
 
 bool hHybridMesh::printSetup()
