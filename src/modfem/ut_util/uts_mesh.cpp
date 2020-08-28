@@ -145,9 +145,6 @@ int utr_mesh_insert_BC_contact(
 			if (utr_mat_get_material( mats[i] )->is_fluid == FLUID) {
 				groups_fluid.push_back(mats[i]);
 			}
-
-			//printf("bleeeeeeeeeeeeee %lf",mat1->atT_dynamic_viscosity[0]);
-
 		}
 
 		mf_log_info("Inserting new BCs.");
